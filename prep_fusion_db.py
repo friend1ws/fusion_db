@@ -1,5 +1,6 @@
-#! /usr/bin/env/python
+#! /usr/bin/env python
 
+from __future__ import print_function
 import xlrd, re
 
 fusion_pair = {}
@@ -81,6 +82,6 @@ with xlrd.open_workbook("StranskyEtAl2014/ncomms5846-s3.xlsx") as book:
 
 for pair in sorted(fusion_pair):
     infos = ';'.join(sorted(list(set(fusion_pair[pair].split(';')))))
-    print pair + '\t' + infos
+    print(pair + '\t' + infos)
 
 
